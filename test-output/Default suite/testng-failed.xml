@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.provar.test.AccountTest">
+      <class name="com.provar.test.AccountTestLT">
         <methods>
+          <include name="Error_assertion"/>
           <include name="launchbrowser"/>
           <include name="close_browser"/>
-          <include name="selectRecord"/>
         </methods>
-      </class> <!-- com.provar.test.AccountTest -->
+      </class> <!-- com.provar.test.AccountTestLT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

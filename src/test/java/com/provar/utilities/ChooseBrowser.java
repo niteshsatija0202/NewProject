@@ -1,6 +1,7 @@
 package com.provar.utilities;
 
-import java.util.concurrent.TimeUnit;
+
+import java.util.concurrent.TimeUnit;import javax.xml.xpath.XPath;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +13,7 @@ public class ChooseBrowser {
 
 	public static WebDriver driver;
 	@Test
-	public static WebDriver getBrowser() {
+	public static WebDriver getBrowser() throws NumberFormatException, Throwable {
 
 		try {
 			if(ReadPropertyFile.getProperty().get("browserType").equals("CH")){
@@ -46,8 +47,9 @@ public class ChooseBrowser {
 		}
 		driver.manage().window().maximize();
 		
-
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        int wait=Integer.valueOf(ReadPropertyFile.getProperty().get("ImplicitWait"));
+		driver.manage().timeouts().implicitlyWait(wait, TimeUnit.SECONDS);
+		
 		return driver;
 
 	}

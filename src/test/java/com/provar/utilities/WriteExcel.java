@@ -16,13 +16,15 @@ import org.testng.annotations.Test;
 
 public class WriteExcel {
 	@Test
-	public static void Write(ArrayList list) throws Throwable {
+	public static void Write(ArrayList list, String path,String sheetName) throws Throwable {
 
-		File file1=new File(ReadPropertyFile.getProperty().get("ReadExcelFile"));
+		//File file1=new File(ReadPropertyFile.getProperty().get("ReadExcelFile"));
+		File file1=new File(path);
 		FileInputStream input=new FileInputStream(file1);
 
 		XSSFWorkbook wb=new XSSFWorkbook(input);
-		XSSFSheet sheet=wb.getSheet(ReadPropertyFile.getProperty().get("ReadExcelFile_Sheet"));
+		//XSSFSheet sheet=wb.getSheet(ReadPropertyFile.getProperty().get("ReadExcelFile_Sheet"));
+		XSSFSheet sheet=wb.getSheet(sheetName);
 
 
 
@@ -48,14 +50,10 @@ public class WriteExcel {
 		list1.add("67");
 		list1.add("p7");
 
-		WriteExcel.Write(list1);
+		//WriteExcel.Write(list1);
+		WriteExcel.Write(list1,ReadPropertyFile.getProperty().get("ReadExcelFile"),ReadPropertyFile.getProperty().get("ReadExcelFile_Sheet"));
 
 
 	}
-
-
-
-
-
 
 }

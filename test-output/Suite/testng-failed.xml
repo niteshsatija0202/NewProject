@@ -8,11 +8,13 @@
   </listeners>
   <test name="Test(failed)">
     <classes>
-      <class name="com.provar.POM.NewTest">
+      <class name="com.provar.test.AccountTestLT">
         <methods>
-          <include name="f"/>
+          <include name="vfMapping"/>
+          <include name="launchbrowser"/>
+          <include name="close_browser"/>
         </methods>
-      </class> <!-- com.provar.POM.NewTest -->
+      </class> <!-- com.provar.test.AccountTestLT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

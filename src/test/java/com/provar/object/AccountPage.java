@@ -107,6 +107,11 @@ public class AccountPage {
 		create_new.click();
 		save.click();
 		String error=account_name_error.getText();
+		if(error_message.equalsIgnoreCase(error)){
+			System.out.println("pass");
+		}else{
+			System.out.println("fail");
+		}
 
 	}
 
@@ -115,6 +120,11 @@ public class AccountPage {
 		create_new.click();
 		save.click();
 		String pageError=page_error.getText();
+		if(pageError.contains(error)){
+			System.out.println("pass");
+		}else{
+			System.out.println("fail");
+		}
 
 	}
 

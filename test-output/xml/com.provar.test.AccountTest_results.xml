@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="8"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="357.623">
+  <properties />
+  
+  
+            <testcase name="Error_assertion" time="16.305" classname="com.provar.test.AccountTest" />
+                <testcase name="selectRecord" time="62.302" classname="com.provar.test.AccountTest" />
+                <testcase name="UpdateAndAssertRecord" time="61.616" classname="com.provar.test.AccountTest" />
+                <testcase name="createAccount" time="31.316" classname="com.provar.test.AccountTest" />
+                <testcase name="uploadFile" time="64.838" classname="com.provar.test.AccountTest" />
+                <testcase name="pageError" time="21.732" classname="com.provar.test.AccountTest" />
+                <testcase name="vfMapping" time="28.897" classname="com.provar.test.AccountTest" />
+                <testcase name="InlineAndAssert" time="70.617" classname="com.provar.test.AccountTest" />
+      
+</testsuite>
